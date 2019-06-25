@@ -1,0 +1,33 @@
+package br.com.example.demo.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+import br.com.example.demo.postagem.PostagemModel;
+
+@Service
+public class PostagemService {
+	
+	private Map<Integer, PostagemModel> postagem = new HashMap<Integer, PostagemModel>();
+	
+	public void adicionarPostagem() {
+		postagem.put(1, new PostagemModel("Eleven12345", "Eu amo Stranger things.../n"
+				+ "#season3"));
+		postagem.put(2, new PostagemModel("EuMESM0irene", "O JIM CARREY é INCRÍVELLLL!!!/n"
+				+ "#E para o caso de não nos vermos mais, bom dia, boa tarde, boa noite"));
+		postagem.put(3, new PostagemModel("LimonaRosA765", "EU 0DEIO DO FUNDO DA ALMA, GREYS ANATOMY/n"
+				+ "#MedicinaDeVdd"));
+	}
+	
+	public Map<Integer, PostagemModel> mostrarPostagem(){
+		return this.postagem;
+		
+	}
+	
+	public PostagemModel buscarPostagem(int id) {
+		return this.postagem.get(id);
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.example.demo.postagem;
+
+public class PostagemModel {
+
+}
